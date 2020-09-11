@@ -29,11 +29,11 @@
     "test": "direflow-scripts test"
   },
   "dependencies": {
+    "direflow-component": "^3.5.1",
+    "direflow-scripts": "3.4.14",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1",
-    "direflow-component": "3.4.14",
-    "direflow-scripts": "3.4.14"
+    "react-scripts": "^3.4.3"
   },
   "devDependencies": {
     "eslint-plugin-node": "^11.0.0",

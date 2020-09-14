@@ -1,25 +1,26 @@
 import React from 'react';
-import { Styled } from 'direflow-component';
-import styles from './App.css';
+import { withStyles } from 'direflow-component';
 import PreBookingForm from "./PreBookingForm"
 import AdultsCount from './AdultsCount'
 import ChildrenCount from './ChildrenCount'
 import ChildrenAgeForm from './ChildrenAgeForm'
+import DatePicker from "./DatePicker"
+
+import styles from './App.css';
 
 const App = () => {
 
   return (
-    <Styled styles={styles}>
-      <div className="pre-booking-form">
-        <h1>Réservation Rapidus</h1>
-        <PreBookingForm>
-          <AdultsCount />
-          <ChildrenCount />
-          <ChildrenAgeForm />
-        </PreBookingForm>
-      </div>
-    </Styled>
+    <div className="pre-booking-form">
+      <h1>Réservation Rapidus</h1>
+      <PreBookingForm>
+        <DatePicker />
+        <AdultsCount />
+        <ChildrenCount />
+        <ChildrenAgeForm />
+      </PreBookingForm>
+    </div>
   );
 };
 
-export default App;
+export default withStyles(styles)(App);

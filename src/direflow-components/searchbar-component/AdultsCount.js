@@ -1,5 +1,7 @@
-import React, {useContext} from "react"
+import { Styled } from "direflow-component"
+import React, { useContext } from "react"
 import { PreBookingFormContext } from "./PreBookingForm"
+import styles from './App.css'
 
 export default function AdultsCount() {
     const { nbAdults, setNbAdults } = useContext(PreBookingFormContext)
@@ -7,7 +9,7 @@ export default function AdultsCount() {
     const addAdult = () => {
         setNbAdults(nbAdults + 1)
     }
-    
+
     const removeAdult = () => {
         if (nbAdults > 0) {
             setNbAdults(nbAdults - 1)
@@ -15,13 +17,15 @@ export default function AdultsCount() {
     }
 
     return (
-        <div className="adults-count">
-            <h2>Nombre d'adultes</h2>
-            <div className="btn-count">
-                <button onClick={removeAdult}>-</button>
-                <p>{nbAdults}</p>
-                <button onClick={addAdult}>+</button>
+        <Styled styles={styles}>
+            <div>
+                <h2>Nombre d'adultes</h2>
+                <div className="btn-count">
+                    <button onClick={removeAdult}>-</button>
+                    <p>{nbAdults}</p>
+                    <button onClick={addAdult}>+</button>
+                </div>
             </div>
-        </div>
+        </Styled>
     )
 }

@@ -24,9 +24,10 @@
   ],
   "scripts": {
     "start": "direflow-scripts start",
-    "build": "direflow-scripts build",
+    "build": "direflow-scripts build --split --vendor",
     "build:lib": "direflow-scripts build:lib",
-    "test": "direflow-scripts test"
+    "test": "direflow-scripts test",
+    "dev": "serve -l 3100 build"
   },
   "dependencies": {
     "direflow-component": "^3.5.1",

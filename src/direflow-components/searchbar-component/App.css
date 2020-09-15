@@ -87,3 +87,7 @@
 .scope--1904386023 .DateRangePickerInput__withBorder{
     border: none;
 }
+
+.date{
+    margin-left: 25px;
+}

@@ -12,18 +12,20 @@ function DatePicker() {
     return (
         <div className="datepicker">
             <h2>Dates du séjour</h2>
-            <DateRangePicker
-                startDate={startDate}
-                startDateId="start-date"
-                endDate={endDate}
-                endDateId="end-date"
-                onDatesChange={({ startDate, endDate }) => {
-                    setStartDate(startDate);
-                    setEndDate(endDate);
-                }}
-                focusedInput={isFocused}
-                onFocusChange={(isFocused) => setFocused(isFocused)}
-            />
+            <div className="date">
+                <DateRangePicker
+                    startDate={startDate}
+                    startDateId="start-date"
+                    endDate={endDate}
+                    endDateId="end-date"
+                    onDatesChange={({ startDate, endDate }) => {
+                        setStartDate(startDate);
+                        setEndDate(endDate);
+                    }}
+                    focusedInput={isFocused}
+                    onFocusChange={(isFocused) => setFocused(isFocused)}
+                />
+            </div>
         </div>
     )
 

@@ -1,25 +1,30 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import 'react-dates/initialize'
-import { SingleDatePicker } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import { PreBookingFormContext } from "./PreBookingForm";
 import { withStyles } from "direflow-component";
 import datePickerStyles from 'react-dates/lib/css/_datepicker.css';
 
 
 function DatePicker() {
-    //const { startDate, setStartDate, endDate, setEndDate, focusedInput, setFocusedInput } = useContext(PreBookingFormContext)
-    //const [endDate, setEndDate] = useState(null)
-    const [isFocused, setFocused] = useState(false)
-    const [date, setDate] = useState()
+    const { startDate, setStartDate, endDate, setEndDate, isFocused, setFocused } = useContext(PreBookingFormContext)
 
     return (
-        <SingleDatePicker
-            date={date} // momentPropTypes.momentObj or null
-            onDateChange={(date) => setDate(date)} // PropTypes.func.isRequired
-            focused={isFocused} // PropTypes.bool
-            onFocusChange={({ focused }) => { setFocused(focused); }}// PropTypes.func.isRequired
-            id="date_picker" // PropTypes.string.isRequired,
-        />
+        <div className="datepicker">
+            <h2>Dates du séjour</h2>
+            <DateRangePicker
+                startDate={startDate}
+                startDateId="start-date"
+                endDate={endDate}
+                endDateId="end-date"
+                onDatesChange={({ startDate, endDate }) => {
+                    setStartDate(startDate);
+                    setEndDate(endDate);
+                }}
+                focusedInput={isFocused}
+                onFocusChange={(isFocused) => setFocused(isFocused)}
+            />
+        </div>
     )
 
 }

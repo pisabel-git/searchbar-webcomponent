@@ -7,9 +7,9 @@ export default function PreBookingForm({ children }) {
     const [nbAdults, setNbAdults] = useState(0)
     const [nbChildren, setNbChildren] = useState(0)
     const [childrenList, setChildrenList] = useState([])
-    const [startDate, setStartDate] = useState(null)
-    const [endDate, setEndDate] = useState(null)
-    const [focusedInput, setFocusedInput] = useState(null)
+    const [startDate, setStartDate] = useState()
+    const [endDate, setEndDate] = useState()
+    const [isFocused, setFocused] = useState()
 
     const bookingContext = {
         nbAdults: nbAdults,
@@ -22,8 +22,8 @@ export default function PreBookingForm({ children }) {
         setStartDate: (val) => setStartDate(val),
         endDate: endDate,
         setEndDate: (val) => setEndDate(val),
-        focusedInput: focusedInput,
-        setFocusedInput: (val) => setFocusedInput(val)
+        isFocused: isFocused,
+        setFocused: (val) => setFocused(val)
     }
 
     return (

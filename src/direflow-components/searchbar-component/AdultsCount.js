@@ -18,7 +18,7 @@ export default function AdultsCount() {
 
     return (
         <Styled styles={styles}>
-            <div>
+            <div className="adults-count">
                 <h2>Nombre d'adultes</h2>
                 <div className="btn-count">
                     <button onClick={removeAdult}>-</button>

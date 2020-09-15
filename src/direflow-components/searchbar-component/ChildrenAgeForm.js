@@ -1,9 +1,10 @@
 import React, {useContext} from "react"
 import { PreBookingFormContext } from "./PreBookingForm"
 import ChildrenDetailForm from './ChildrenDetailForm'
+import moment from 'moment'
 
 export default function ChildrenAgeForm(){
-    const {nbAdults, nbChildren, childrenList} = useContext(PreBookingFormContext)
+    const {nbAdults, nbChildren, childrenList, startDate, endDate} = useContext(PreBookingFormContext)
 
     const handleSubmitAction = (event) => {
         event.preventDefault();
@@ -15,10 +16,12 @@ export default function ChildrenAgeForm(){
         let visitors = {
           nb_adults: nbAdults,
           nb_children: childrenList.length,
-          age_children: childrenList
+          age_children: childrenList,
+          start_date: moment(startDate).format('L'),
+          end_date: moment(endDate).format('L')
         }
-
-        let url = `https://tickets.parcasterix.fr/fr-FR/les-offres-du-parc-asterix?adults=${visitors.nb_adults}&children=${visitors.nb_children}`
+        console.log(visitors.start_date, visitors.end_date)
+        let url = `https://tickets.parcasterix.fr/fr-FR/les-offres-du-parc-asterix?adults=${visitors.nb_adults}&children=${visitors.nb_children}&childrenAges=${visitors.age_children}&startDate=${visitors.start_date}&endDate=${visitors.end_date}`
         window.open(url)
     }
 

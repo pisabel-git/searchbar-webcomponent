@@ -18,8 +18,8 @@ export default function AdultsCount() {
 
     return (
         <Styled styles={styles}>
-            <div className="adults-count">
-                <h2>Nombre d'adultes</h2>
+            <div className="adults-count flex">
+                <h2>Nombre d'adultes<br /><span>12 ans et plus</span></h2>
                 <div className="btn-count">
                     <button onClick={removeAdult}>-</button>
                     <p>{nbAdults}</p>

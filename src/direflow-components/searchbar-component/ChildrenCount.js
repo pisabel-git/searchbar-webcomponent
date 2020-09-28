@@ -1,14 +1,14 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import { PreBookingFormContext } from "./PreBookingForm"
 
-export default function ChildrenCount(){
-    const {nbChildren, setNbChildren, childrenList, setChildrenList} = useContext(PreBookingFormContext)
+export default function ChildrenCount() {
+    const { nbChildren, setNbChildren, childrenList, setChildrenList } = useContext(PreBookingFormContext)
 
     const addChild = () => {
         setNbChildren(nbChildren + 1)
         setChildrenList(childrenList.concat(0))
     }
-    
+
     const removeChild = () => {
         if (childrenList.length > 0) {
             setNbChildren(nbChildren - 1)
@@ -17,8 +17,8 @@ export default function ChildrenCount(){
     }
 
     return (
-        <div className="children-count">
-            <h2>Nombre d'enfants</h2>
+        <div className="children-count flex">
+            <h2>Nombre d'enfants<br /><span>De 3 à 11 ans inclus</span></h2>
             <div className="btn-count">
                 <button onClick={removeChild}>-</button>
                 <p>{nbChildren}</p>

@@ -3,21 +3,24 @@ import 'react-dates/initialize'
 import { DateRangePicker } from 'react-dates';
 import { PreBookingFormContext } from "./PreBookingForm";
 import { withStyles } from "direflow-component";
-import datePickerStyles from 'react-dates/lib/css/_datepicker.css';
+
+import styles from './DatePicker.css'
 
 
 function DatePicker() {
     const { startDate, setStartDate, endDate, setEndDate, isFocused, setFocused } = useContext(PreBookingFormContext)
 
     return (
-        <div className="datepicker">
+        <div className='pre-booking-datepicker'>
             <h2>Dates du séjour</h2>
             <div className="date">
                 <DateRangePicker
                     startDate={startDate}
                     startDateId="start-date"
+                    startDatePlaceholderText="Arrivée"
                     endDate={endDate}
                     endDateId="end-date"
+                    endDatePlaceholderText="Départ"
                     onDatesChange={({ startDate, endDate }) => {
                         setStartDate(startDate);
                         setEndDate(endDate);
@@ -31,4 +34,4 @@ function DatePicker() {
 
 }
 
-export default withStyles(datePickerStyles)(DatePicker)
+export default withStyles(styles)(DatePicker)

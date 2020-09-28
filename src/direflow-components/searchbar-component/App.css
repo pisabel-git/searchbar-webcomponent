@@ -1,93 +1,96 @@
-.pre-booking-form{
-    width: 350px;
-    box-shadow: 7px 7px 15px #bbcfda,
-                -4px -4px 13px #ffffff, 
-                inset 4px 4px 8px rgba(209, 217, 230, 0.2),
-                inset -8px -8px 8px rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    text-align: center;
-    padding: 2%;
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.adults-count, .children-count, .datepicker{
-    margin-top: 3rem;
+.pre-booking-title {
+    text-align: center;
+}
+
+.pre-booking-form{
+    width: 350px;
+    box-shadow: 0 0 10px #cccccc;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.pre-booking-datepicker {
+    text-align: center;
 }
 
 .btn-count{
-    width: 30%;
-    margin: auto;
+    width: 100px;
+    height:50px;
     display: flex;
-    justify-content: space-between;
-    box-shadow: 7px 7px 15px #bbcfda,
-                -4px -4px 13px #ffffff, 
-                inset 4px 4px 8px rgba(209, 217, 230, 0.2),
-                inset -8px -8px 8px rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    padding: 3%;
-}
-
-.btn-count:hover{
-    box-shadow: 4px 2px 18px #bbcfda,
-                -4px -4px 13px #ffffff, 
-                inset 6px 6px 16px rgba(209, 217, 230, 0.8),
-                inset -8px -8px 8px rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    border: 1px solid #dbdbdb;
+    border-radius:30px;
 }
 
 .btn-count > button {
     background: none;
     border: none;
-    padding: 5%;
+    height:100%;
+    margin:0 5px;
+    padding:0 15px;
+    font-size: larger;     
 }
 
 .btn-count > button:hover {
     cursor: pointer;
 }
 
-.children-age-form > form{
-    width: 100%;
-    margin: auto;
+.adults-count {
+    margin-top:20px;
 }
 
-.children-age-form > form > ul{
+.adults-count span, .children-count span {
+    font-size: medium;
+    font-weight: 200;
+}
+
+.children-age-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.children-age-form > ul{
     list-style-type: none;
-    padding-inline-start: 0px;
+    padding-left:0;
 }
 
-.children-age-form > form > ul > li{
+.children-age-form > ul > li{
+    padding: 3% 0;
+}
+
+.children-age-form input{
+    width: 200px;
+}
+
+.pre-booking-submit-button {
+    background: #2561ec;
+    color:white;
+    box-shadow: 0 6px 0  #163d97;
+    font-weight: bold;
+    font-size:large;
+    border:none;
     padding: 3%;
+    border-radius: 50px;
+    cursor: pointer;
+    outline:0;
 }
 
-.children-age-form > form > ul > li > input{
-    width: 50%;
+.pre-booking-submit-button:hover {
+    position:relative;
+    top:2px;
+    box-shadow: 0 4px 0  #163d97;
 }
 
-.submit-button {
-    width: 100%;
-    margin: auto;
-    margin-top: 5%;
-    background: none;
-    border: none;
-    box-shadow: 7px 7px 15px #bbcfda,
-                -4px -4px 13px #ffffff, 
-                inset 4px 4px 8px rgba(209, 217, 230, 0.2),
-                inset -8px -8px 8px rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 3%;
-    border-radius: 30px;
-}
-
-.submit-button:hover {
-    box-shadow: 4px 2px 18px #bbcfda,
-                -4px -4px 13px #ffffff, 
-                inset 6px 6px 16px rgba(209, 217, 230, 0.8),
-                inset -8px -8px 8px rgba(255, 255, 255, 0.2);
-}
-
-.scope--1904386023 .DateRangePickerInput__withBorder{
-    border: none;
-}
-
-.date{
-    margin-left: 25px;
+.pre-booking-submit-button:active {
+    position:relative;
+    top:4px;
+    box-shadow: 0 2px 0  #163d97;
 }

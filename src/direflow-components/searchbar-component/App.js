@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div className="pre-booking-form">
-      <h1>Réservation Rapidvs</h1>
+      <h1 className='pre-booking-title'>Réservation Rapidvs</h1>
       <PreBookingForm>
         <DatePicker />
         <AdultsCount />

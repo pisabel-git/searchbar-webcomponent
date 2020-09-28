@@ -550,14 +550,14 @@
     line-height: 24px;
     color: #484848;
     background-color: none;
-    width: 70%;
+    width: 75%;
     padding: 11px 11px 9px;
     border: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: 2px solid transparent;
     border-left: 0;
-    border-radius: 0;
+    border-radius: 50px;
     cursor:pointer;
   }
   .DateInput_input__small {
